@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Apigee
+spec:
+  owner: user:apigee
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: swag-test-temp113
+  description: Apigee onboarded for swag-test-temp113
+  annotations:
+    github.com/project-slug: kushanD95/swag-test-temp113
+    github.com/repo-url: https://github.com/kushanD95/swag-test-temp113
+spec:
+  type: service
+  lifecycle: dev
+  owner: user:apigee
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: swag-test-temp113-dev-api
+  description: Apigee onboarded for swag-test-temp113 API
+  is_apigee_enabled: true
+spec:
+  type: openapi
+  lifecycle: dev
+  owner: user:apigee
+  definition: https://github.com/kushanD95/swag-test-temp113/development/dev/petstore.json
